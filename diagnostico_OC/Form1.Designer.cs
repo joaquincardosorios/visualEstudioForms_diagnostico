@@ -28,262 +28,264 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_generar = new System.Windows.Forms.Button();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.gb_estado = new System.Windows.Forms.GroupBox();
-            this.rb_pendiente = new System.Windows.Forms.RadioButton();
-            this.rb_completado = new System.Windows.Forms.RadioButton();
-            this.tb_id = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dtp_fechaCrea = new System.Windows.Forms.DateTimePicker();
-            this.lbl_fechaC = new System.Windows.Forms.Label();
-            this.lbl_fechaRes = new System.Windows.Forms.Label();
-            this.dtp_fechaRes = new System.Windows.Forms.DateTimePicker();
-            this.gb_prioridad = new System.Windows.Forms.GroupBox();
-            this.rb_baja = new System.Windows.Forms.RadioButton();
-            this.rb_media = new System.Windows.Forms.RadioButton();
-            this.rb_alta = new System.Windows.Forms.RadioButton();
-            this.tb_informador = new System.Windows.Forms.TextBox();
-            this.lbl_informador = new System.Windows.Forms.Label();
-            this.tb_responsable = new System.Windows.Forms.TextBox();
-            this.lbl_responsable = new System.Windows.Forms.Label();
-            this.tb_descripcion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.gb_estado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gb_prioridad.SuspendLayout();
-            this.SuspendLayout();
+            btn_generar = new Button();
+            lbl_id = new Label();
+            gb_estado = new GroupBox();
+            rb_pendiente = new RadioButton();
+            rb_completado = new RadioButton();
+            tb_id = new TextBox();
+            dgv_OCs = new DataGridView();
+            dtp_fechaCrea = new DateTimePicker();
+            lbl_fechaC = new Label();
+            lbl_fechaRes = new Label();
+            dtp_fechaRes = new DateTimePicker();
+            gb_prioridad = new GroupBox();
+            rb_baja = new RadioButton();
+            rb_media = new RadioButton();
+            rb_alta = new RadioButton();
+            tb_informador = new TextBox();
+            lbl_informador = new Label();
+            tb_responsable = new TextBox();
+            lbl_responsable = new Label();
+            tb_descripcion = new TextBox();
+            label1 = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            gb_estado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_OCs).BeginInit();
+            gb_prioridad.SuspendLayout();
+            SuspendLayout();
             // 
             // btn_generar
             // 
-            this.btn_generar.Location = new System.Drawing.Point(592, 194);
-            this.btn_generar.Name = "btn_generar";
-            this.btn_generar.Size = new System.Drawing.Size(75, 23);
-            this.btn_generar.TabIndex = 0;
-            this.btn_generar.Text = "Generar OC";
-            this.btn_generar.UseVisualStyleBackColor = true;
-            this.btn_generar.Click += new System.EventHandler(this.btn_generar_Click);
+            btn_generar.Location = new Point(569, 194);
+            btn_generar.Name = "btn_generar";
+            btn_generar.Size = new Size(98, 23);
+            btn_generar.TabIndex = 0;
+            btn_generar.Text = "Generar OC";
+            btn_generar.UseVisualStyleBackColor = true;
+            btn_generar.Click += Btn_generar_Click;
             // 
             // lbl_id
             // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(43, 23);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(20, 15);
-            this.lbl_id.TabIndex = 1;
-            this.lbl_id.Text = "Id:";
+            lbl_id.AutoSize = true;
+            lbl_id.Location = new Point(43, 23);
+            lbl_id.Name = "lbl_id";
+            lbl_id.Size = new Size(20, 15);
+            lbl_id.TabIndex = 1;
+            lbl_id.Text = "Id:";
             // 
             // gb_estado
             // 
-            this.gb_estado.Controls.Add(this.rb_pendiente);
-            this.gb_estado.Controls.Add(this.rb_completado);
-            this.gb_estado.Location = new System.Drawing.Point(43, 91);
-            this.gb_estado.Name = "gb_estado";
-            this.gb_estado.Size = new System.Drawing.Size(126, 99);
-            this.gb_estado.TabIndex = 2;
-            this.gb_estado.TabStop = false;
-            this.gb_estado.Text = "Estado";
+            gb_estado.Controls.Add(rb_pendiente);
+            gb_estado.Controls.Add(rb_completado);
+            gb_estado.Location = new Point(43, 91);
+            gb_estado.Name = "gb_estado";
+            gb_estado.Size = new Size(126, 99);
+            gb_estado.TabIndex = 2;
+            gb_estado.TabStop = false;
+            gb_estado.Text = "Estado";
             // 
             // rb_pendiente
             // 
-            this.rb_pendiente.AutoSize = true;
-            this.rb_pendiente.Checked = true;
-            this.rb_pendiente.Location = new System.Drawing.Point(22, 32);
-            this.rb_pendiente.Name = "rb_pendiente";
-            this.rb_pendiente.Size = new System.Drawing.Size(78, 19);
-            this.rb_pendiente.TabIndex = 1;
-            this.rb_pendiente.TabStop = true;
-            this.rb_pendiente.Text = "Pendiente";
-            this.rb_pendiente.UseVisualStyleBackColor = true;
+            rb_pendiente.AutoSize = true;
+            rb_pendiente.Checked = true;
+            rb_pendiente.Location = new Point(22, 32);
+            rb_pendiente.Name = "rb_pendiente";
+            rb_pendiente.Size = new Size(78, 19);
+            rb_pendiente.TabIndex = 1;
+            rb_pendiente.TabStop = true;
+            rb_pendiente.Text = "Pendiente";
+            rb_pendiente.UseVisualStyleBackColor = true;
             // 
             // rb_completado
             // 
-            this.rb_completado.AutoSize = true;
-            this.rb_completado.Location = new System.Drawing.Point(22, 57);
-            this.rb_completado.Name = "rb_completado";
-            this.rb_completado.Size = new System.Drawing.Size(91, 19);
-            this.rb_completado.TabIndex = 0;
-            this.rb_completado.Text = "Completado";
-            this.rb_completado.UseVisualStyleBackColor = true;
-            this.rb_completado.CheckedChanged += new System.EventHandler(this.rb_completado_CheckedChanged);
+            rb_completado.AutoSize = true;
+            rb_completado.Location = new Point(22, 57);
+            rb_completado.Name = "rb_completado";
+            rb_completado.Size = new Size(91, 19);
+            rb_completado.TabIndex = 0;
+            rb_completado.Text = "Completado";
+            rb_completado.UseVisualStyleBackColor = true;
+            rb_completado.CheckedChanged += Rb_completado_CheckedChanged;
             // 
             // tb_id
             // 
-            this.tb_id.Enabled = false;
-            this.tb_id.Location = new System.Drawing.Point(69, 20);
-            this.tb_id.Name = "tb_id";
-            this.tb_id.Size = new System.Drawing.Size(100, 23);
-            this.tb_id.TabIndex = 3;
+            tb_id.Enabled = false;
+            tb_id.Location = new Point(69, 20);
+            tb_id.Name = "tb_id";
+            tb_id.Size = new Size(100, 23);
+            tb_id.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgv_OCs
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 261);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(624, 150);
-            this.dataGridView1.TabIndex = 4;
+            dgv_OCs.AllowUserToAddRows = false;
+            dgv_OCs.AllowUserToDeleteRows = false;
+            dgv_OCs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_OCs.Location = new Point(43, 236);
+            dgv_OCs.Name = "dgv_OCs";
+            dgv_OCs.ReadOnly = true;
+            dgv_OCs.RowTemplate.Height = 25;
+            dgv_OCs.Size = new Size(624, 175);
+            dgv_OCs.TabIndex = 4;
             // 
             // dtp_fechaCrea
             // 
-            this.dtp_fechaCrea.Enabled = false;
-            this.dtp_fechaCrea.Location = new System.Drawing.Point(138, 53);
-            this.dtp_fechaCrea.Name = "dtp_fechaCrea";
-            this.dtp_fechaCrea.Size = new System.Drawing.Size(200, 23);
-            this.dtp_fechaCrea.TabIndex = 5;
+            dtp_fechaCrea.Enabled = false;
+            dtp_fechaCrea.Location = new Point(138, 53);
+            dtp_fechaCrea.Name = "dtp_fechaCrea";
+            dtp_fechaCrea.Size = new Size(200, 23);
+            dtp_fechaCrea.TabIndex = 5;
             // 
             // lbl_fechaC
             // 
-            this.lbl_fechaC.AutoSize = true;
-            this.lbl_fechaC.Location = new System.Drawing.Point(43, 57);
-            this.lbl_fechaC.Name = "lbl_fechaC";
-            this.lbl_fechaC.Size = new System.Drawing.Size(92, 15);
-            this.lbl_fechaC.TabIndex = 6;
-            this.lbl_fechaC.Text = "Fecha creacion: ";
+            lbl_fechaC.AutoSize = true;
+            lbl_fechaC.Location = new Point(43, 57);
+            lbl_fechaC.Name = "lbl_fechaC";
+            lbl_fechaC.Size = new Size(92, 15);
+            lbl_fechaC.TabIndex = 6;
+            lbl_fechaC.Text = "Fecha creacion: ";
             // 
             // lbl_fechaRes
             // 
-            this.lbl_fechaRes.AutoSize = true;
-            this.lbl_fechaRes.Location = new System.Drawing.Point(362, 57);
-            this.lbl_fechaRes.Name = "lbl_fechaRes";
-            this.lbl_fechaRes.Size = new System.Drawing.Size(102, 15);
-            this.lbl_fechaRes.TabIndex = 7;
-            this.lbl_fechaRes.Text = "Fecha resolución: ";
+            lbl_fechaRes.AutoSize = true;
+            lbl_fechaRes.Location = new Point(362, 57);
+            lbl_fechaRes.Name = "lbl_fechaRes";
+            lbl_fechaRes.Size = new Size(102, 15);
+            lbl_fechaRes.TabIndex = 7;
+            lbl_fechaRes.Text = "Fecha resolución: ";
             // 
             // dtp_fechaRes
             // 
-            this.dtp_fechaRes.Enabled = false;
-            this.dtp_fechaRes.Location = new System.Drawing.Point(470, 53);
-            this.dtp_fechaRes.Name = "dtp_fechaRes";
-            this.dtp_fechaRes.Size = new System.Drawing.Size(197, 23);
-            this.dtp_fechaRes.TabIndex = 8;
+            dtp_fechaRes.Enabled = false;
+            dtp_fechaRes.Location = new Point(470, 53);
+            dtp_fechaRes.Name = "dtp_fechaRes";
+            dtp_fechaRes.Size = new Size(197, 23);
+            dtp_fechaRes.TabIndex = 8;
             // 
             // gb_prioridad
             // 
-            this.gb_prioridad.Controls.Add(this.rb_baja);
-            this.gb_prioridad.Controls.Add(this.rb_media);
-            this.gb_prioridad.Controls.Add(this.rb_alta);
-            this.gb_prioridad.Location = new System.Drawing.Point(196, 91);
-            this.gb_prioridad.Name = "gb_prioridad";
-            this.gb_prioridad.Size = new System.Drawing.Size(126, 99);
-            this.gb_prioridad.TabIndex = 3;
-            this.gb_prioridad.TabStop = false;
-            this.gb_prioridad.Text = "Prioridad";
+            gb_prioridad.Controls.Add(rb_baja);
+            gb_prioridad.Controls.Add(rb_media);
+            gb_prioridad.Controls.Add(rb_alta);
+            gb_prioridad.Location = new Point(196, 91);
+            gb_prioridad.Name = "gb_prioridad";
+            gb_prioridad.Size = new Size(126, 99);
+            gb_prioridad.TabIndex = 3;
+            gb_prioridad.TabStop = false;
+            gb_prioridad.Text = "Prioridad";
             // 
             // rb_baja
             // 
-            this.rb_baja.AutoSize = true;
-            this.rb_baja.Location = new System.Drawing.Point(22, 69);
-            this.rb_baja.Name = "rb_baja";
-            this.rb_baja.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rb_baja.Size = new System.Drawing.Size(47, 19);
-            this.rb_baja.TabIndex = 2;
-            this.rb_baja.Text = "Baja";
-            this.rb_baja.UseVisualStyleBackColor = true;
+            rb_baja.AutoSize = true;
+            rb_baja.Location = new Point(22, 20);
+            rb_baja.Name = "rb_baja";
+            rb_baja.RightToLeft = RightToLeft.No;
+            rb_baja.Size = new Size(47, 19);
+            rb_baja.TabIndex = 2;
+            rb_baja.Text = "Baja";
+            rb_baja.UseVisualStyleBackColor = true;
             // 
             // rb_media
             // 
-            this.rb_media.AutoSize = true;
-            this.rb_media.Checked = true;
-            this.rb_media.Location = new System.Drawing.Point(22, 45);
-            this.rb_media.Name = "rb_media";
-            this.rb_media.Size = new System.Drawing.Size(58, 19);
-            this.rb_media.TabIndex = 1;
-            this.rb_media.TabStop = true;
-            this.rb_media.Text = "Media";
-            this.rb_media.UseVisualStyleBackColor = true;
+            rb_media.AutoSize = true;
+            rb_media.Checked = true;
+            rb_media.Location = new Point(22, 45);
+            rb_media.Name = "rb_media";
+            rb_media.Size = new Size(58, 19);
+            rb_media.TabIndex = 1;
+            rb_media.TabStop = true;
+            rb_media.Text = "Media";
+            rb_media.UseVisualStyleBackColor = true;
             // 
             // rb_alta
             // 
-            this.rb_alta.AutoSize = true;
-            this.rb_alta.Location = new System.Drawing.Point(22, 20);
-            this.rb_alta.Name = "rb_alta";
-            this.rb_alta.Size = new System.Drawing.Size(46, 19);
-            this.rb_alta.TabIndex = 0;
-            this.rb_alta.Text = "Alta";
-            this.rb_alta.UseVisualStyleBackColor = true;
+            rb_alta.AutoSize = true;
+            rb_alta.Location = new Point(22, 70);
+            rb_alta.Name = "rb_alta";
+            rb_alta.Size = new Size(46, 19);
+            rb_alta.TabIndex = 0;
+            rb_alta.Text = "Alta";
+            rb_alta.UseVisualStyleBackColor = true;
             // 
             // tb_informador
             // 
-            this.tb_informador.Location = new System.Drawing.Point(433, 108);
-            this.tb_informador.Name = "tb_informador";
-            this.tb_informador.Size = new System.Drawing.Size(234, 23);
-            this.tb_informador.TabIndex = 10;
+            tb_informador.Location = new Point(433, 108);
+            tb_informador.Name = "tb_informador";
+            tb_informador.Size = new Size(234, 23);
+            tb_informador.TabIndex = 10;
             // 
             // lbl_informador
             // 
-            this.lbl_informador.AutoSize = true;
-            this.lbl_informador.Location = new System.Drawing.Point(362, 111);
-            this.lbl_informador.Name = "lbl_informador";
-            this.lbl_informador.Size = new System.Drawing.Size(70, 15);
-            this.lbl_informador.TabIndex = 9;
-            this.lbl_informador.Text = "Informador:";
+            lbl_informador.AutoSize = true;
+            lbl_informador.Location = new Point(362, 111);
+            lbl_informador.Name = "lbl_informador";
+            lbl_informador.Size = new Size(70, 15);
+            lbl_informador.TabIndex = 9;
+            lbl_informador.Text = "Informador:";
             // 
             // tb_responsable
             // 
-            this.tb_responsable.Enabled = false;
-            this.tb_responsable.Location = new System.Drawing.Point(433, 144);
-            this.tb_responsable.Name = "tb_responsable";
-            this.tb_responsable.Size = new System.Drawing.Size(234, 23);
-            this.tb_responsable.TabIndex = 12;
+            tb_responsable.Enabled = false;
+            tb_responsable.Location = new Point(433, 144);
+            tb_responsable.Name = "tb_responsable";
+            tb_responsable.Size = new Size(234, 23);
+            tb_responsable.TabIndex = 12;
             // 
             // lbl_responsable
             // 
-            this.lbl_responsable.AutoSize = true;
-            this.lbl_responsable.Location = new System.Drawing.Point(359, 147);
-            this.lbl_responsable.Name = "lbl_responsable";
-            this.lbl_responsable.Size = new System.Drawing.Size(79, 15);
-            this.lbl_responsable.TabIndex = 11;
-            this.lbl_responsable.Text = "Responsable: ";
+            lbl_responsable.AutoSize = true;
+            lbl_responsable.Location = new Point(359, 147);
+            lbl_responsable.Name = "lbl_responsable";
+            lbl_responsable.Size = new Size(79, 15);
+            lbl_responsable.TabIndex = 11;
+            lbl_responsable.Text = "Responsable: ";
             // 
             // tb_descripcion
             // 
-            this.tb_descripcion.Location = new System.Drawing.Point(258, 20);
-            this.tb_descripcion.Name = "tb_descripcion";
-            this.tb_descripcion.Size = new System.Drawing.Size(409, 23);
-            this.tb_descripcion.TabIndex = 14;
+            tb_descripcion.Location = new Point(258, 20);
+            tb_descripcion.Name = "tb_descripcion";
+            tb_descripcion.Size = new Size(409, 23);
+            tb_descripcion.TabIndex = 14;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 15);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Descripcion:";
+            label1.AutoSize = true;
+            label1.Location = new Point(188, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 15);
+            label1.TabIndex = 13;
+            label1.Text = "Descripcion:";
             // 
             // s
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 450);
-            this.Controls.Add(this.tb_descripcion);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_responsable);
-            this.Controls.Add(this.lbl_responsable);
-            this.Controls.Add(this.tb_informador);
-            this.Controls.Add(this.lbl_informador);
-            this.Controls.Add(this.gb_prioridad);
-            this.Controls.Add(this.dtp_fechaRes);
-            this.Controls.Add(this.lbl_fechaRes);
-            this.Controls.Add(this.lbl_fechaC);
-            this.Controls.Add(this.dtp_fechaCrea);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.tb_id);
-            this.Controls.Add(this.gb_estado);
-            this.Controls.Add(this.lbl_id);
-            this.Controls.Add(this.btn_generar);
-            this.Name = "s";
-            this.Text = "Ordenes de Trabajo";
-            this.gb_estado.ResumeLayout(false);
-            this.gb_estado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.gb_prioridad.ResumeLayout(false);
-            this.gb_prioridad.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(712, 450);
+            Controls.Add(tb_descripcion);
+            Controls.Add(label1);
+            Controls.Add(tb_responsable);
+            Controls.Add(lbl_responsable);
+            Controls.Add(tb_informador);
+            Controls.Add(lbl_informador);
+            Controls.Add(gb_prioridad);
+            Controls.Add(dtp_fechaRes);
+            Controls.Add(lbl_fechaRes);
+            Controls.Add(lbl_fechaC);
+            Controls.Add(dtp_fechaCrea);
+            Controls.Add(dgv_OCs);
+            Controls.Add(tb_id);
+            Controls.Add(gb_estado);
+            Controls.Add(lbl_id);
+            Controls.Add(btn_generar);
+            Name = "s";
+            Text = "Ordenes de Trabajo";
+            gb_estado.ResumeLayout(false);
+            gb_estado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_OCs).EndInit();
+            gb_prioridad.ResumeLayout(false);
+            gb_prioridad.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -294,7 +296,7 @@
         private RadioButton rb_pendiente;
         private RadioButton rb_completado;
         private TextBox tb_id;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_OCs;
         private DateTimePicker dtp_fechaCrea;
         private Label lbl_fechaC;
         private Label lbl_fechaRes;
